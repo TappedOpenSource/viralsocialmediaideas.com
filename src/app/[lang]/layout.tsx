@@ -1,17 +1,17 @@
-import '@/app/globals.css'
-import type { Metadata } from 'next'
-import { Arimo } from 'next/font/google'
+import '@/app/globals.css';
+import type { Metadata } from 'next';
+import { Arimo } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/react';
-import { i18n } from '@/i18n-config'
+import { i18n } from '@/i18n-config';
 
-const arimo = Arimo({ subsets: ['latin'] })
+const arimo = Arimo({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Viral Social Media Ideas',
   description: 'Generate viral social media idea with Ai for musicians',
   applicationName: 'viral-social-media-ideas',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Social Media', 'Musicians', 'Viral', "Ai", "Ideas", "Generator", 'Music'],
+  keywords: ['Social Media', 'Musicians', 'Viral', 'Ai', 'Ideas', 'Generator', 'Music'],
   authors: [{ name: 'Johannes', url: 'https://jonaylor.xyz' }],
   creator: 'Johannes Naylor',
   publisher: 'Johannes Naylor',
@@ -37,10 +37,10 @@ export const metadata: Metadata = {
     locale: 'en_US',
     type: 'website',
   },
-}
+};
 
 export async function generateStaticParams() {
-  return i18n.locales.map((locale) => ({ lang: locale }))
+  return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
 export default function RootLayout({
@@ -67,5 +67,5 @@ export default function RootLayout({
         <Analytics />
       </body>
     </html>
-  )
+  );
 }
