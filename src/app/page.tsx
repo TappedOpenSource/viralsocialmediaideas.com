@@ -52,7 +52,7 @@ export default function Home() {
               />
             </a>
             <a
-              className="md:hidden underline flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
+              className="md:hidden underline text-black flex place-items-center gap-2 p-8 lg:pointer-events-auto"
               href="https://app.tapped.ai/download"
               target="_blank"
               rel="noopener noreferrer"
