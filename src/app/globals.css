@@ -25,3 +25,10 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+#by-tapped {
+  font-family: 'Nunito', sans-serif;
+  padding: 0.7rem;
+  color: #4A5E68;
+  background-color: #fff;
+}
