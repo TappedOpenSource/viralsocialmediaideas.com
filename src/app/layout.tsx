@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Generate viral social media idea with Ai for musicians',
   applicationName: 'viral-social-media-ideas',
   referrer: 'origin-when-cross-origin',
-  keywords: ['Next.js', 'React', 'JavaScript'],
+  keywords: ['Social Media', 'Musicians', 'Viral', "Ai", "Ideas", "Generator", 'Music'],
   authors: [{ name: 'Johannes', url: 'https://jonaylor.xyz' }],
   creator: 'Johannes Naylor',
   publisher: 'Johannes Naylor',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     siteName: 'Viral Social Media Ideas',
     images: [
       {
-        url: 'https://viralsocialmediaideas/og.png',
+        url: 'https://viralsocialmediaideas.com/og.png',
         width: 800,
         height: 600,
       },
