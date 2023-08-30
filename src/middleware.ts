@@ -36,8 +36,9 @@ export function middleware(request: NextRequest) {
       '/images/icon_1024.png',
       // Your other files in `public`
     ].includes(pathname)
-  )
-    return
+  ) {
+    return;
+  }
 
   // Check if there is any supported locale in the pathname
   const pathnameIsMissingLocale = i18n.locales.every(
