@@ -1,7 +1,8 @@
-import './globals.css'
+import '@/app/globals.css'
 import type { Metadata } from 'next'
 import { Arimo } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
+import { i18n } from '@/i18n-config'
 
 const arimo = Arimo({ subsets: ['latin'] })
 
@@ -38,13 +39,19 @@ export const metadata: Metadata = {
   },
 }
 
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }))
+}
+
 export default function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: { lang: string }
 }) {
   return (
-    <html lang="en">
+    <html lang={params.lang}>
       <meta name="twitter:card" content="summary_large_image" />
       <meta
         name="twitter:title"

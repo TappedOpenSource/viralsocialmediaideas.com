@@ -1,36 +1,10 @@
-'use client'
-
 import Image from 'next/image'
-import { useEffect, useState } from 'react';
-import { getRandomPostIdea } from '@/utils/random';
+import { getDictionary } from '@/dictionaries';
+import { Locale } from '@/i18n-config';
+import RandomIdea from './components/RandomIdea';
 
-export default function Home() {
-  const [idea, setIdea] = useState('')
-
-  const newPostIdea = () => {
-    const { idea } = getRandomPostIdea();
-    setIdea(idea);
-  };
-
-  useEffect(() => {
-    newPostIdea();
-  }, []);
-
-  useEffect(() => {
-    const handleKeyboardEvent = (event: KeyboardEvent) => {
-      if (event.code === 'Space') {
-        newPostIdea();
-      }
-    };
-    
-    document.addEventListener("keyup", handleKeyboardEvent);
-    // clean up
-    return () => {
-      document.removeEventListener("keyup", (event) => {
-      });
-    };
-  }, []);
-
+export default async function Home({ lang }: { lang: Locale }) {
+  const dict = await getDictionary(lang) // en
 
   return (
     <main className="flex min-h-screen bg-[#38B6FF] flex-col items-center justify-center p-12">
@@ -71,23 +45,7 @@ export default function Home() {
           priority
         />
       </div>
-      <div className="text-center lg:max-w-5xl lg:w-full pb-12">
-
-        <div className="text-5xl font-extrabold m-2 text-white">
-          {idea}
-        </div>
-        <div className="p-6"></div>
-        <button 
-        className="bg-black p-4 rounded-full text-white font-bold text-lg"
-        onClick={newPostIdea}>
-          show me the next idea!
-        </button>
-        <div className="p-2"></div>
-        <div className="hidden md:block">
-          or press space
-        </div>
-
-      </div>
+      <RandomIdea ideas={dict.postIdeas} />
     </main>
   )
 }
