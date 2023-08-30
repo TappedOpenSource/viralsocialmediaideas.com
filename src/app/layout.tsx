@@ -8,7 +8,7 @@ const arimo = Arimo({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Viral Social Media Ideas',
   description: 'Generate viral social media idea with Ai for musicians',
-  applicationName: 'Next.js',
+  applicationName: 'viral-social-media-ideas',
   referrer: 'origin-when-cross-origin',
   keywords: ['Next.js', 'React', 'JavaScript'],
   authors: [{ name: 'Johannes', url: 'https://jonaylor.xyz' }],
