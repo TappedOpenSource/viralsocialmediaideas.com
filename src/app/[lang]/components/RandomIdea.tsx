@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { randomChoice } from '@/utils/random';
+import { track } from '@vercel/analytics';
 
 const RandomIdea = ({ ideas }: {
     ideas: string[]
@@ -9,6 +10,9 @@ const RandomIdea = ({ ideas }: {
   const [idea, setIdea] = useState('');
   const newPostIdea = async () => {
     const idea = randomChoice(ideas);
+    track('new-idea', {
+      idea,
+    });
     setIdea(idea);
   };
 
