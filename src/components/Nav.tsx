@@ -42,7 +42,7 @@ const Nav = () => {
               rel="noopener noreferrer"
               className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white '
             >
-                Home
+                home
             </Link>
             <Link
               href='https://getmusicmarketing.com'
@@ -50,7 +50,7 @@ const Nav = () => {
               rel="noopener noreferrer"
               className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
             >
-                Marketing
+                marketing
             </Link>
             <Link
               href='https://viralsocialmediaideas.com'
@@ -58,13 +58,21 @@ const Nav = () => {
               rel="noopener noreferrer"
               className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
             >
-                Social Media
+                social media
+            </Link>
+            <Link
+              href='https://getmusicnewsletters.com'
+              target="_blank"
+              rel="noopener noreferrer"
+              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
+            >
+                newsletter
             </Link>
             <Link
               href='mailto://support@tapped.ai'
               className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
             >
-                Contact Us
+                contact us
             </Link>
           </div>
         </div>
