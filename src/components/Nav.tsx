@@ -13,7 +13,7 @@ export default function Nav() {
 
   return (
     <>
-      <nav className='flex items-center flex-wrap bg-transparent p-3 '>
+      <nav className='fixed flex items-center flex-wrap bg-transparent p-3 '>
         <Link
           href="https://tapped.ai"
           target="_blank"
@@ -28,7 +28,7 @@ export default function Nav() {
           />
         </Link>
         <button
-          className='inline-flex p-3 hover:bg-blue-500 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+          className='inline-flex p-3 hover:bg-white hover:text-black rounded lg:hidden text-white ml-auto hover:text-white outline-none'
           onClick={handleClick}
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 17h14M5 12h14M5 7h14"/></svg>
@@ -44,7 +44,7 @@ export default function Nav() {
               href='https://tapped.ai'
               target="_blank"
               rel="noopener noreferrer"
-              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white '
+              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-white hover:text-black '
             >
                 home
             </Link>
@@ -52,7 +52,7 @@ export default function Nav() {
               href='https://tappedapp.notion.site/Technical-Roadmap-4edc036572bd4d89913f5cd5a4cde0f6?pvs=4'
               target="_blank"
               rel="noopener noreferrer"
-              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
+              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-white hover:text-black'
             >
                 roadmap
             </Link>
@@ -60,7 +60,7 @@ export default function Nav() {
               href='https://blog.tapped.ai'
               target="_blank"
               rel="noopener noreferrer"
-              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
+              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-white hover:text-black'
             >
                 blog
             </Link>
@@ -68,13 +68,13 @@ export default function Nav() {
               href='https://getmusicnewsletters.com'
               target="_blank"
               rel="noopener noreferrer"
-              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
+              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-white hover:text-black'
             >
                 newsletter
             </Link>
             <Link
               href='mailto://support@tapped.ai'
-              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
+              className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-white hover:text-black'
             >
                 contact us
             </Link>
