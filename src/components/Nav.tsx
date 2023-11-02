@@ -1,8 +1,10 @@
+'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
-const Nav = () => {
+export default function Nav() {
   const [active, setActive] = useState(false);
 
   const handleClick = () => {
@@ -12,22 +14,24 @@ const Nav = () => {
   return (
     <>
       <nav className='flex items-center flex-wrap bg-transparent p-3 '>
-
         <Link
           href="https://tapped.ai"
           target="_blank"
           rel="noopener noreferrer"
           className='inline-flex items-center p-2 mr-4 '
         >
-          <span className='text-xl text-white font-bold uppercase tracking-wide'>
-              TAPPED AI
-          </span>
+          <Image
+            src='/images/icon_1024.png'
+            width={75}
+            height={75}
+            alt='tapped logo'
+          />
         </Link>
         <button
-          className=' inline-flex p-3 hover:bg-blue-500 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
+          className='inline-flex p-3 hover:bg-blue-500 rounded lg:hidden text-white ml-auto hover:text-white outline-none'
           onClick={handleClick}
         >
-
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 17h14M5 12h14M5 7h14"/></svg>
         </button>
         {/* Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div
@@ -45,20 +49,20 @@ const Nav = () => {
                 home
             </Link>
             <Link
-              href='https://getmusicmarketing.com'
+              href='https://tappedapp.notion.site/Technical-Roadmap-4edc036572bd4d89913f5cd5a4cde0f6?pvs=4'
               target="_blank"
               rel="noopener noreferrer"
               className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
             >
-                marketing
+                roadmap
             </Link>
             <Link
-              href='https://viralsocialmediaideas.com'
+              href='https://blog.tapped.ai'
               target="_blank"
               rel="noopener noreferrer"
               className='lg:inline-flex lg:w-auto w-full px-3 py-2 rounded text-white font-bold items-center justify-center hover:bg-blue-500 hover:text-white'
             >
-                social media
+                blog
             </Link>
             <Link
               href='https://getmusicnewsletters.com'
@@ -79,6 +83,4 @@ const Nav = () => {
       </nav>
     </>
   );
-};
-
-export default Nav;
+}

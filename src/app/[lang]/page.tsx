@@ -1,31 +1,30 @@
-'use client';
-
-import Image from 'next/image';
-import { getDictionary } from '@/dictionaries';
+import { Rubik } from 'next/font/google';
 import { Locale } from '@/i18n-config';
-import RandomIdea from './components/RandomIdea';
+import Link from 'next/link';
 import Nav from '@/components/Nav';
 
-const Home = async ({ params }: { params: { lang: Locale }}) => {
-  const dict = await getDictionary(params.lang); // en
+const rubik = Rubik({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
+});
 
+export default function Home({ params }: {
+  params: { lang: Locale },
+}) {
   return (
-    <div className='h-screen'>
+    <div className={`min-h-screen ${rubik.className}`}>
       <Nav />
       <main className="flex bg-[#38B6FF] flex-col items-center justify-center p-12">
-        <div className="hidden md:block py-12">
-          <Image
-            src="/images/icon_1024.png"
-            alt="Tapped AI Logo"
-            width={200}
-            height={200}
-            priority
-          />
-        </div>
-        <RandomIdea ideas={dict.postIdeas} />
+        <h1 className='text-4xl md:text-7xl font-extrabold text-center md:w-2/3 py-8'>
+          generate social media ideas in less than a second
+        </h1>
+        <Link
+          className='font-bold text-lg text-center px-8 py-2 rounded-full bg-black'
+          href="/[lang]/idea"
+          as={`/${params.lang}/idea`}>
+          begin
+        </Link>
       </main>
     </div>
   );
-};
-
-export default Home;
+}
